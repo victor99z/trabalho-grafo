@@ -1,4 +1,5 @@
 #include "Vertice.hpp"
+#include <iostream>
 
 unsigned int Vertice::nextId{0};
 
@@ -16,4 +17,13 @@ void Vertice::adicionarAresta(Aresta* aresta){
 }
 void Vertice::removerAresta(Aresta* aresta){
     arestasLigadas.remove(aresta);
+}
+
+void Vertice::toString(){
+    std::cout << "Vertice de id: " << this->id << std::endl;
+    std::list<Aresta*>::iterator it;
+
+    for(it = arestasLigadas.begin(); it != arestasLigadas.end(); it++){
+        std::cout << (*it)->getId() << std::endl;
+    }
 }

@@ -8,15 +8,10 @@ int main(){
     Vertice* v1{ new Vertice{} };
     Vertice* v2{ new Vertice{} };
     
-    std::cout << v1->getId() << std::endl;
-    std::cout << v2->getId() << std::endl;
+    Aresta* a1{ new Aresta{} };
+    Aresta* a2{ new Aresta{} };
 
-    free(v1);
-    free(v2);
-
-    std::cout << v1->getId() << std::endl;
-    std::cout << v2->getId() << std::endl;
- 
+    Grafo g1{};
    
     return EXIT_SUCCESS;
 }

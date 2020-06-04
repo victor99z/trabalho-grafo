@@ -1,6 +1,7 @@
 #pragma once
 
 #include <list>
+
 class Vertice;
 
 class Aresta{
@@ -8,13 +9,15 @@ class Aresta{
         Aresta();
         ~Aresta();
 
-        void adicionarVertice(Vertice*);
-        void removerVertice(Vertice*);
+        void adicionarVertice(Vertice* vertice);
+        void removerVertice(Vertice* vertice);
 
         unsigned int getId() const;
+
+        void toString();
 
     private:
         unsigned int id;
         static unsigned int nextId;
-        std::list<Vertice* const> verticesLigados;
+        std::list<Vertice*> verticesLigados;
 };

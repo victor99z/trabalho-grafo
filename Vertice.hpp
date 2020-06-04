@@ -12,6 +12,8 @@ class Vertice{
         void adicionarAresta(Aresta* aresta);
         void removerAresta(Aresta* aresta);
 
+        void toString();
+
     private:
         std::list<Aresta*> arestasLigadas;
         unsigned int id;
