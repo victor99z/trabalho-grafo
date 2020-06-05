@@ -24,6 +24,7 @@ void Vertice::toString(){
     std::list<Aresta*>::iterator it;
 
     for(it = arestasLigadas.begin(); it != arestasLigadas.end(); it++){
-        std::cout << (*it)->getId() << std::endl;
+        std::cout << "Aresta id: " <<  (*it)->getId() << "\t";
     }
+    std::cout << "\n########################" << std::endl;
 }

@@ -5,13 +5,10 @@
 class Vertice{
     public:
         Vertice();
-        ~Vertice();
 
         unsigned int getId() const;
-
         void adicionarAresta(Aresta* aresta);
         void removerAresta(Aresta* aresta);
-
         void toString();
 
     private:

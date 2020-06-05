@@ -3,8 +3,14 @@ execute=grafo
 
 all: $(execute)
 
-$(execute): main.o Aresta.o Vertice.o Grafo.o
-	g++ -o grafo main.o Aresta.o Grafo.o Vertice.o $(parametrosCompilacao)
+	
+$(execute): main.o Grafo.o Aresta.o Vertice.o 
+	g++ -o $(execute) main.o Grafo.o Aresta.o Vertice.o  $(parametrosCompilacao)
+
+run:
+	clear
+	$(execute)
+	./grafo
 
 main.o:
 	g++ -c main.cpp $(parametrosCompilacao)

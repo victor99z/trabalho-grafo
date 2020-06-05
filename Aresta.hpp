@@ -1,23 +1,19 @@
 #pragma once
 
-#include <list>
-
 class Vertice;
 
 class Aresta{
     public:
-        Aresta();
-        ~Aresta();
+        Aresta(Vertice* const v1, Vertice* const v2);
 
-        void adicionarVertice(Vertice* vertice);
-        void removerVertice(Vertice* vertice);
-
+        Vertice* getVertice_1() const;
+        Vertice* getVertice_2() const;
         unsigned int getId() const;
-
-        void toString();
+        void toString() const;
 
     private:
         unsigned int id;
         static unsigned int nextId;
-        std::list<Vertice*> verticesLigados;
+        Vertice* const v1;
+        Vertice* const v2;
 };
