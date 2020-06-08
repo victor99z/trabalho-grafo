@@ -7,9 +7,9 @@ all: $(execute)
 $(execute): main.o Grafo.o Aresta.o Vertice.o 
 	g++ -o $(execute) main.o Grafo.o Aresta.o Vertice.o  $(parametrosCompilacao)
 
-run:
+run: main.o Grafo.o Aresta.o Vertice.o
 	clear
-	$(execute)
+	g++ -o $(execute) main.o Grafo.o Aresta.o Vertice.o  $(parametrosCompilacao)
 	./grafo
 
 main.o:
